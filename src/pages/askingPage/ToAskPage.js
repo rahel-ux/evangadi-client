@@ -28,7 +28,7 @@ const ToAskPage = () => {
    e.preventDefault();
    try {
      const loginRes = await axios.post(
-       "http://localhost:4000/api/questions/ask",
+       "https://evangadi-forum-api-cgnt.onrender.com/api/questions/ask",
        {
          ////the name given:and the one targeted from form.name given////
          questionTitle: form.questionTitle,

@@ -1,21 +1,19 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { UserContext } from '../../context/UserContext';
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import "./login.css"
+import React, { useContext, useEffect, useState } from "react";
+import { UserContext } from "../../context/UserContext";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import "./login.css";
 // import Header from '../../header/Header';
 // import Button from "react-bootstrap/Button";
 // import Form from "react-bootstrap/Form";
 // import InputGroup from "react-bootstrap/InputGroup";
-import "./login.css"
+import "./login.css";
 import IconButton from "@mui/material/IconButton";
 import InputAdornment from "@mui/material/InputAdornment";
-import { TextField } from '@mui/material';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { TextField } from "@mui/material";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 // import Button from "@mui/material-next/Button";
-
-
 
 const Login = () => {
   const [userData, setUserData] = useContext(UserContext);
@@ -26,41 +24,41 @@ const Login = () => {
     showPassword: false,
   });
   const handleClickShowPassword = () => {
-    setShow({...show, showPassword: !show.showPassword})
-  }
-    const handleChange = (e) => {
-      setForm({...form, [e.target.name]:e.target.value})
-    }
+    setShow({ ...show, showPassword: !show.showPassword });
+  };
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
-    const handleSubmit = async(e) => {
-      e.preventDefault()
-      console.log(form)
-      try {
-        const loginRes = await axios.post('http://localhost:4000/api/users/login',
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(form);
+    try {
+      const loginRes = await axios.post(
+        "https://evangadi-forum-api-cgnt.onrender.com/api/users/login",
         {
           email: form.email,
-          password: form.password
+          password: form.password,
+        }
+      );
+      console.log(loginRes);
 
-        })
-        console.log(loginRes);
-
-        setUserData({
-          token: loginRes.data.token,
-          user: loginRes.data.user
-        })
-        // set localStorage with the token
-        localStorage.setItem('auth-token', loginRes.data.token)
-        // navigate user to homepage
-        navigate('/')
-      } catch(err){
-        console.log("problem", err.response.data.msg);
-        alert(err.response.data.msg)
-      }
+      setUserData({
+        token: loginRes.data.token,
+        user: loginRes.data.user,
+      });
+      // set localStorage with the token
+      localStorage.setItem("auth-token", loginRes.data.token);
+      // navigate user to homepage
+      navigate("/");
+    } catch (err) {
+      console.log("problem", err.response.data.msg);
+      alert(err.response.data.msg);
     }
-  useEffect(() =>{
-    if(userData.user) navigate('/')
-  }, [userData.user, navigate])
-  
+  };
+  useEffect(() => {
+    if (userData.user) navigate("/");
+  }, [userData.user, navigate]);
 
   return (
     <>
@@ -76,7 +74,6 @@ const Login = () => {
             </div>
 
             <form onSubmit={handleSubmit}>
-              
               <div className="emailInput">
                 <TextField
                   placeholder="Your Email"
@@ -144,6 +141,6 @@ const Login = () => {
       </div>
     </>
   );
-}
+};
 
-export default Login
+export default Login;

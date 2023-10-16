@@ -1,11 +1,10 @@
-import axios from 'axios';
-import React, { useContext, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import { UserContext } from '../../context/UserContext';
-import Header from '../../header/Header';
+import axios from "axios";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { UserContext } from "../../context/UserContext";
+import Header from "../../header/Header";
 import { TextField } from "@mui/material";
-import "./signUp.css"
-
+import "./signUp.css";
 
 const SignUp = () => {
   const [userData, setUserData] = useContext(UserContext);
@@ -20,20 +19,26 @@ const SignUp = () => {
     e.preventDefault();
     try {
       // sending data to be registered in database
-      await axios.post( "http://localhost:4000/api/users", form)
+      await axios.post(
+        "https://evangadi-forum-api-cgnt.onrender.com/api/users",
+        form
+      );
 
       // once registered the login automatically so send the new user info to be logged in
 
-        const loginRes = await axios.post("http://localhost:4000/api/users/login", {
+      const loginRes = await axios.post(
+        "https://evangadi-forum-api-cgnt.onrender.com/api/users/login",
+        {
           email: form.email,
-          password: form.password
-        });
-       
-        // set the global state with the new user info
+          password: form.password,
+        }
+      );
+
+      // set the global state with the new user info
 
       setUserData({
         token: loginRes.data.token,
-        user: loginRes.data.user
+        user: loginRes.data.user,
       });
       // set localStorage with the token
       localStorage.setItem("auth-token", loginRes.data.token);
@@ -44,7 +49,6 @@ const SignUp = () => {
       // alert(err.response.data.msg);
     }
   };
-
 
   return (
     <div className="signUp">
@@ -184,6 +188,6 @@ const SignUp = () => {
       </div>
     </div>
   );
-}
+};
 
-export default SignUp
+export default SignUp;

@@ -24,11 +24,12 @@ function App() {
       token = "";
     } else {
       console.log(token);
-      const userRes = await axios.get("http://localhost:4000/api/users", 
-      {
-        
-        headers: { "x-auth-token": token },
-      });
+      const userRes = await axios.get(
+        "https://evangadi-forum-api-cgnt.onrender.com/api/users",
+        {
+          headers: { "x-auth-token": token },
+        }
+      );
 
       // set the global state with user info
       setUserData({

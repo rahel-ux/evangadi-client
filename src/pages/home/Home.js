@@ -1,16 +1,15 @@
-import { UserContext } from '../../context/UserContext';
+import { UserContext } from "../../context/UserContext";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./home.css";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import axios from "axios";
 import AnswerPage from "../answerPage/Answer";
- import exampleImage from "../../../src/images/smallerProfileImage.png";
- import "./home.css"
+import exampleImage from "../../../src/images/smallerProfileImage.png";
+import "./home.css";
 
-
-const Home = ({logout}) => {
+const Home = ({ logout }) => {
   const navigate = useNavigate();
   const [allQuestions, setAllQuestions] = useState([]);
   const [userData, setUserData] = useContext(UserContext);
@@ -23,7 +22,7 @@ const Home = ({logout}) => {
     try {
       const questionRes = await axios.get(
         // ///made route for it in question.router (getquestions function in question.controller)
-        "http://localhost:4000/api/questions/ask",
+        "https://evangadi-forum-api-cgnt.onrender.com/api/questions/ask",
         {
           // ////need auth to fetch it
           headers: { "x-auth-token": userData.token },
@@ -48,8 +47,6 @@ const Home = ({logout}) => {
       Questions();
     }
   }, [userData.user, navigate]);
-
-
 
   return (
     <div className="">
@@ -93,9 +90,6 @@ const Home = ({logout}) => {
       {/* <AnswerPage allQuestions={allQuestions} /> */}
     </div>
   );
-} 
+};
 
-
-
-
-export default Home
+export default Home;
