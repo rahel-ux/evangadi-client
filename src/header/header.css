@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+} 
+.container{
+    display: flex;
+    justify-content:space-around;
+}
+
+.header-wrapper {
+    /* display: flex;
+    justify-content: space-between; */
+    background-color: #fff;
+
+}
+.logo-wrapperss {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-wrapperss img {
+    width: 200px;
+    box-sizing: border-box;
+   
+    /* padding: 20px; 
+    object-fit: contain; 
+    background-color: #fff; */
+}
+.right-wrapperss {
+    margin: auto;
+display:flex ;
+justify-content: space-around;}
+
+.header-img {
+    padding: 18px;
+}
+.home, .how, .sign {
+    padding: 10px 12px;
+}
+.sign  button{
+    background-color:#516CF1; 
+    padding: 10px 40px;
+}
+.sign button:hover{
+    background: #FE8402;
+}

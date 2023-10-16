@@ -1,0 +1,37 @@
+.footer-wrapper{
+    margin: 0;
+    padding: 0;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: space-around;
+    background-color: #3A4559;
+}
+.footerLogo-wrapper {
+padding: 40px 0 90px;
+padding-bottom: 60px;
+
+}
+.footerLogo-wrapper img{
+width: 120px;
+}
+.icon-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.usefulLink{
+padding-top: 40px;
+padding-bottom: 50px;
+}
+.cardTitle {
+   font-size: 18px; 
+   color: #fff;
+   margin: 0 0 10px;
+   font-weight: 700;
+    margin: 0 0 10px;
+
+}
+.cardSubtitle {
+    font-size: 15px;
+    padding: 5px 0;
+}

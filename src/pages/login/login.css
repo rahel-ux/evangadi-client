@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.login {
+    background-image: url(./bg-svg-f.svg);
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+   background-color: #F5F5F5;
+
+    
+
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #F5F5F5; */
+    width: 60%;
+    margin: 0 auto;
+
+}
+.login-wrapper .left-wrapper h3{
+    /* padding-top: 20px; */
+    margin: 0 0 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+
+}
+.left-wrapper p {
+    font-size: 15px;
+    text-align: center;
+}
+
+.left-wrapper {
+    /* border: 2px solid #FBFBFB; */
+    /* margin: 10px auto; */
+    background-color:#FBFBFB ;
+    padding: 40px;
+    /* padding-bottom: 30px; */
+    width: 50%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+    /* padding-top: 90px; */
+
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    /* box-shadow: #FBFBFB; */
+    /* box-shadow: rgb(204, 219, 232) */
+
+}
+/* .left-wrapper h1 {
+    /* padding-top: 60px; */
+/* } */ */
+
+.login-description{
+    margin: 0 0 30px;
+}
+.login-description h3 {
+    padding-top: 50px;
+}
+
+.Right-wrapper {
+    /* margin: 10px auto; */
+   /* margin-left: 100px; */
+   /* background-color: #F5F5F5; */
+   width: 50%;
+   margin-top: 60px;
+}
+/* .Right-wrapper p {
+font-size: 15px;
+} */
+.loginButton  {
+     /* padding: 10px; */
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.loginButton button {
+    background-color:#516CF1;  
+    width: 250px;
+    padding: 7px;
+    border-radius: 4px;
+
+}
+.loginButton button :hover{
+    background: #FE8402;
+
+}
+/* Link {
+    margin-bottom: 30px;
+} */
+/* input {
+    padding: 5px;
+    width: 300px;
+} */
+
+.emailInput{
+    margin: 15px 0;
+}
+.passsword, .email { 
+    width: 100%; 
+    padding: 12px 20px; 
+    margin: 8px 0;
+box-sizing: border-box;
+border: 2px solid lightgray;
+  border-radius: 4px;
+
+}
+ 
+/* .email {
+    margin-bottom: 10px;
+}   */
+
+
+.Right-wrapper h3 {
+    color:#FF8105 ;
+    font-size: small;
+    font-weight: normal;
+    padding: 10px;
+}
+.Right-wrapper h2{
+    margin: 10px 0;
+    color: #4B456F;
+}
+
+.Right-wrapper p {
+    font-weight:300;
+    padding-bottom: 10px;
+    font-size: small;
+    margin: 10px 0;
+}
+.buttonDescription button {
+    background: #FE8402;
+    padding: 7px;
+    border-radius: 4px;
+
+
+}
+.right-description {
+    padding-left: 30px;
+}
