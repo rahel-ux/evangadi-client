@@ -7,7 +7,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import axios from "axios";
 import AnswerPage from "../answerPage/Answer";
 import exampleImage from "../../../src/images/smallerProfileImage.png";
-import "./home.css";
+
 
 const Home = ({ logout }) => {
   const navigate = useNavigate();
