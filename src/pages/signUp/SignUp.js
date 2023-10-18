@@ -106,7 +106,7 @@ const SignUp = () => {
               {/* <div className="name"> */}
               <TextField
                 placeholder="First Name"
-                name="firstname"
+                name="firstName"
                 onChange={handleChange}
                 className="firstname"
               />
@@ -115,25 +115,18 @@ const SignUp = () => {
               {/* <div> */}
               <TextField
                 placeholder="Last Name"
-                name="lastname"
+                name="lastName"
                 onChange={handleChange}
                 className="lastname"
               />
               {/* </div> */}
             </div>
 
-            {/* <div className="userName">
-              <TextField
-                placeholder="User Name"
-                name="username"
-                onChange={handleChange}
-                className="username"
-              />
-            </div> */}
+          
             <div className="userName">
               <TextField
                 placeholder="User Name"
-                name="password"
+                name="userName"
                 onChange={handleChange}
                 className="passsword"
               />
