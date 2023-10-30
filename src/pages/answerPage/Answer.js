@@ -41,7 +41,7 @@ const Answer = () => {
         }
         // /////if there is data change it to json fromat and put it in variable responseData
         const responseData = await questionRes.json();
-        console.log(responseData);
+        // console.log(responseData);
 
         // ////from the changed jsonformat(which is responseData) select me only the data that why we did .data
         const data = responseData.data;
