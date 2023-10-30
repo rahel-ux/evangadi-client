@@ -36,7 +36,7 @@ const Home = ({ logout }) => {
       alert(err.response.data.msg);
     }
   };
-  console.log(allQuestions);
+  // console.log(allQuestions);
 
   // /////if userdata is empty/false(which means no token )navigate to login...
   useEffect(() => {
